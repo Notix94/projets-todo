@@ -1,0 +1,153 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0d1520, #111927);
+  color: #c2e6ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* --- TITRE AVEC EFFET NÉON --- */
+.title h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #c2e6ff;
+  text-shadow: 0 0 5px #3b9eff, 0 0 15px #0090ff;
+}
+
+/* --- CONTAINER DES TÂCHES --- */
+.ajout-tache {
+  background: #1e272e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+}
+
+.ajout-tache h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #c2e6ff;
+}
+
+/* --- INPUT AJOUT TÂCHE --- */
+.ajout-tache input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #2c3e50;
+  color: white;
+  transition: 0.3s;
+}
+
+.ajout-tache input[type="text"]:focus {
+  border: 2px solid #0090ff;
+  box-shadow: 0 0 5px #0090ff;
+}
+
+/* --- BOUTONS MODERNES --- */
+button {
+  background: #3b9eff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin: 5px;
+  color: white;
+  box-shadow: 0 3px 10px rgba(59, 158, 255, 0.3);
+}
+
+button:hover {
+  background: #0090ff;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 144, 255, 0.5);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* --- LISTE DES TÂCHES (sans scroll) --- */
+#taskList,
+#taskListFinish {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#taskList li,
+#taskListFinish li {
+  background: #2c3e50;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #c2e6ff;
+}
+
+#taskList li:hover,
+#taskListFinish li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(59, 158, 255, 0.4);
+}
+
+/* --- CHECKBOX --- */
+.taskCheckbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #f1c40f;
+  cursor: pointer;
+}
+
+/* --- BOUTON TOUT COCHER --- */
+.btn_check_all {
+  width: 18px;
+  height: 18px;
+  accent-color: #f1c40f;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/* --- LISTE DES TÂCHES TERMINÉES --- */
+#taskListFinish {
+  border-top: 2px solid #3b9eff;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 500px) {
+  .ajout-tache {
+    width: 90%;
+  }
+
+  .ajout-tache input[type="text"] {
+    width: 100%;
+  }
+}
